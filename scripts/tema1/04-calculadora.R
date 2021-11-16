@@ -54,7 +54,7 @@ sqrt(25)
 
 exp(1)
 
-log(pi)
+log10(pi)
 
 log(32, 2)
 
@@ -77,7 +77,7 @@ log(4^6, 4)
 
 6^log(4,6)
 
-choose(5,2)
+choose(4?,2)
 
 sin(60*pi/180)
 
@@ -88,6 +88,8 @@ sinpi(1/2) # = sin (pi/2)
 tan(pi) # -1.224647e-16 ~ 0
 
 tan(pi/2) # 1.633124e+16 ~ Inf
+
+asin(1)*(180/pi)
 
 asin(0.8660254) #arc sin en radianes
 
@@ -153,6 +155,20 @@ x = x^2
 x = sqrt(x)
 
 ## Función f(x) = x^3 - (3^x)* sen(x)
+
+mi_funcion = function(base,potencia){
+  a = base;
+  b = potencia;
+  c = a^b;
+  return(c)
+}
+
+mi_funcion(2,8)
+
+rm(x)
+
+ls()
+
 f = function(x) {
   x^3 - (3^x) * sin(x)
 }
@@ -241,3 +257,18 @@ z2
 Mod(z2)
 Arg(z2)
 pi/2
+
+funcion_uno = function(radianes){
+  cos(radianes)
+}
+
+funcion_dos = function(grados){
+  funcion_uno(grados/(180/pi))
+}
+
+resultado = funcion_dos(45)
+
+a = 10
+b = 5
+
+print(paste(sprintf("este numero %i menos %i es igual a ",a,b), "5"))
